@@ -19,17 +19,13 @@ DELETE FROM `reference_loot_template` WHERE `item` IN (24102, 23320, 24101, 2289
 
 -- Removing ZG 1.11 Drop
 
-DELETE FROM `creature_loot_template` WHERE `item` IN (22722, 22721, 22720, 22718, 22711, 22712, 22715, 22714, 22716, 22713);
-DELETE FROM `reference_loot_template` WHERE `item` IN (22722, 22721, 22720, 22718, 22711, 22712, 22715, 22714, 22716, 22713);
+DELETE FROM `creature_loot_template` WHERE `item` IN (22637, 22722, 22721, 22720, 22718, 22711, 22712, 22715, 22714, 22716, 22713);
+DELETE FROM `reference_loot_template` WHERE `item` IN (22637, 22722, 22721, 22720, 22718, 22711, 22712, 22715, 22714, 22716, 22713);
 
 -- Removing 1.11 Relics From Drop
 
-DELETE FROM `creature_loot_template` WHERE `item` IN (23198, 22397, 22398, 23197, 23201, 23203, 22401, 22400, 22395, 22345, 23200, 23199);
-DELETE FROM `reference_loot_template` WHERE `item` IN (23198, 22397, 22398, 23197, 23201, 23203, 22401, 22400, 22395, 22345, 23200, 23199);
-
--- GO "Sothos and Jarien's Heirlooms" Has Been Removed
-
-DELETE FROM `gameobject` WHERE `id` = 181083;
+DELETE FROM `creature_loot_template` WHERE `item`  IN (23198, 22397, 22398, 22399, 23197, 23201, 23203, 22401, 22400, 22395, 22396, 22345, 23200, 23199);
+DELETE FROM `reference_loot_template` WHERE `item` IN (23198, 22397, 22398, 22399, 23197, 23201, 23203, 22401, 22400, 22395, 22396, 22345, 23200, 23199);
 
 -- Setting "Dreamscale Breastplate" Loot Type to BoP (should be shanged back in 1.10)
 
@@ -53,7 +49,7 @@ update creature_loot_template set ChanceOrQuestChance=25 where item=12337;
 delete from conditions where condition_entry=70;
 insert into conditions value (70,12,155,0);
 update creature_loot_template set condition_id=70 where item in (22527,22529,22528,22525,22526);
-  
+
 DELETE FROM `creature_loot_template` WHERE `entry` = 2919 AND `item` IN (3771, 3864, 3914, 4552, 4554, 4637, 4784, 7067, 7075, 7848, 7909, 7910, 7912, 7992, 8029, 8150, 10312, 307929, 307930, 307931, 307932, 307933);
 
 -- Raid & Dungeon Loot Replacements
